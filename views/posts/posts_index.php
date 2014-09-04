@@ -10,6 +10,6 @@
         <span class="badge badge-success"> echo $post['post_created']</span><div class="pull-right"><span class="label"> echo $post['user_id']</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span></div>
     </div>
 </div>
-}
+;}
 ?>
 </html>
