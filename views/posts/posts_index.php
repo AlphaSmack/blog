@@ -17,9 +17,23 @@
                         <a href="#"><span class="label" style="background-color: #5bc0de"><?=$tag?></span></a>
                     <? endforeach?>
                 </span>
-                <span class="label">blog</span>
-                <span class="label">personal</span>
             </div>
     </div>
 </div>
 <?endforeach?>
+<!--
+<div  style="border-bottom: 1px solid; margin: 10px 0px 10px 0px;"></div>
+
+<form class="form-inline" method="post" role="form">
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Pealkiri" name="post_subject"/>
+
+    </div>
+    <br>
+    <textarea style="width: 500px; height:150px; margin: 10px 0px 10px 0px; border-radius: 5px;" ></textarea>
+    <br>
+    <div class="form-group">
+        <button class="btn btn-default" type="submit">Add</button>
+    </div>
+</form>
+--!>
