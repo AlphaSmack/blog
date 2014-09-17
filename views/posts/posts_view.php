@@ -32,7 +32,7 @@
 <?endforeach ?>
         <form class="form-inline" method="post" role="form">
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Your comments" name="data[com_text]"/>
+                    <input class="form-control" type="text" placeholder="Your comments" name="data[com_text]"/>
 
             </div>
             <div class="form-group">

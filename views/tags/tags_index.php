@@ -1,7 +1,5 @@
-<?foreach( $tags as $tag ):?>
-    <div class="list-group">
-        <a href="#" class="list-group-item active">
-            <?=$tag['tag']?>
-        </a>
-    </div>
-<?endforeach?>
+<ul class="list-group">
+    <? foreach ($tags as $tag): ?>
+        <li class="list-group-item"><a href="tags/view/<?= $tag['tag_name'] ?>"><?=$tag['tag_name']?></a></li>
+    <? endforeach ?>
+</ul>

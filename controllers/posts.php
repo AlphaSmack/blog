@@ -10,16 +10,6 @@ class posts extends Controller{
         }
 	}
 
-    function index_ajax(){
-		echo "\$_POST:<br>";
-        var_dump($_POST);
-    }
-
-	function index_post(){
-		echo "\$_POST:<br>";
-		var_dump($_POST);
-	}
-
     function view(){
         $post_id = $this ->params[0];
         $this->post = get_first("SELECT * FROM post NATURAL JOIN user WHERE post_id='$post_id'");
@@ -32,5 +22,12 @@ class posts extends Controller{
         $data['post_id'] = $this->params[0];
         $data['author'] = 'Klaabu';
         insert('comment', $data);
+    }
+
+    function index_post(){
+        $data = $_POST['data'];
+        $data['post_id'] = $this->params[0];
+        $data['user_id'] = '1';
+        insert('post', $data);
     }
 }
