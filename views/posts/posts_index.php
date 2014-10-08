@@ -12,13 +12,13 @@
         <span class="badge badge-success">Posted <?=$post['post_created']?> by <?=$post['username']?></span>
         <div class="pull-right">
             <span class="label"></span>
-            <?foreach ($tags[$post['post_id']] as $tag):?>
-                <span class="label">
-                    <a href="tags/view/<?= $tag['tag_id'] ?>/<?= $tag['tag_name'] ?>"><span class="label label-info">
-                        <?=$tag['tag_name'] ?>
-                    </a>
-                </span>
-            <?endforeach?>
+            <? if(!empty($tags[$post['post_id']])): foreach ($tags[$post['post_id']] as $tag):?>
+                <a href="#">
+                    <span class="label" style="background-color: #5bc0de">
+                        <?=$tag?>
+                    </span>
+                </a>
+            <?endforeach; endif?>
         </div>
     </div>
 </div>
