@@ -9,7 +9,7 @@
                 <span class="label"></span>
                 <span class="label">
                     <?foreach ($tags as $tag):?>
-                        <a href="#"><span class="label label-info">
+                        <a href="<?=$tag['tag_name']?>"><span class="label label-info">
                         <?=$tag['tag_name']?></span></a>
 
                     <?endforeach?>
