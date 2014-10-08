@@ -9,7 +9,8 @@
                 <span class="label"></span>
                 <span class="label">
                     <?foreach ($tags as $tag):?>
-                           <a href="tags/view/<?= $tag['tag_id'] ?>/<?= $tag['tag_name'] ?>"><span class="label label-info"><?=$tag['tag_name'] ?></span></a>
+                        <a href="#"><span class="label label-info">
+                        <?=$tag['tag_name']?></span></a>
 
                     <?endforeach?>
                 </span>
