@@ -12,19 +12,20 @@
         <span class="badge badge-success">Posted <?=$post['post_created']?> by <?=$post['username']?></span>
         <div class="pull-right">
             <span class="label"></span>
+            <?foreach ($tags[$post['post_id']] as $tag):?>
                 <span class="label">
-                    <?foreach ($tags[$post['post_id']] as $tag):?>
-                        <a href="tags/view/<?= $tag['tag_id'] ?>/<?= $tag['tag_name'] ?>"><span class="label label-info"><?=$tag['tag_name'] ?></span></a>
-                    <? endforeach?>
+                    <a href="tags/view/<?= $tag['tag_id'] ?>/<?= $tag['tag_name'] ?>"><span class="label label-info">
+                        <?=$tag['tag_name'] ?>
+                    </a>
                 </span>
-            </div>
+            <?endforeach?>
+        </div>
     </div>
 </div>
 <?endforeach?>
 
 <?php if ($auth->logged_in == true): ?>
 
-<div  style="border-bottom: 1px solid; margin: 10px 0px 10px 0px;"></div>
 
 <form class="form-inline" method="post" role="form">
     <div class="form-group">
