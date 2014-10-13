@@ -1,3 +1,4 @@
+<?foreach( $posts as $post ):?>
 <div class="span8">
     <h1><?=$post['post_subject']?></h1>
     <p>
@@ -18,6 +19,7 @@
     </div>
 </div>
 <br>
+
 <?foreach ($comments as $comment): ?>
     <div class="commentBox">
         <ul class="commentList">
