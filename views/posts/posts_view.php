@@ -1,37 +1,27 @@
-<?foreach( $posts as $post ):?>
 <div class="span8">
-    <h1><?=$post['post_subject']?></h1>
-    <p>
-        <?=$post['post_text']?>
-    </p>
-    <div style="border-bottom: 1px solid; padding-bottom: 5px;">
-        <span class="badge badge-success">Posted <?=$post['post_created']?> by <?=$post['username']?></span>
-            <div class="pull-right">
-                <span class="label"></span>
-                <span class="label">
-                    <?foreach ($tags as $tag):?>
-                        <a href="#"><span class="label label-info">
-                        <?=$tag['tag_name']?></span></a>
+    <h1><?= $post['post_subject'] ?></h1>
 
-                    <?endforeach?>
-                </span>
-            </div>
-    </div>
+    <p><?= $post['post_text'] ?></p>
+
+    <div>
+        <? foreach ($tags as $tag): ?>
+            <a href="tags/view/<?= $tag['tag_name'] ?>">
+                <span class="label label-info"><?= $tag['tag_name'] ?></span>
+            </a>
+        <? endforeach ?>
+        <p><span class="badge"><?= $post['post_created'] ?></span>
+        </p></div>
 </div>
-<br>
+<h3>Kommentaarid</h3>
+<? foreach ($comments as $comment): ?>
+    <div class="well">
+        <p><?= $comment['comment_text'] ?></p>
 
-<?foreach ($comments as $comment): ?>
-    <div class="commentBox">
-        <ul class="commentList">
-            <li>
-                <div class="commentText">
-                    <h4><?=$comment['com_text']?></h4>
-                    <?=$comment['author']?>
-                    <?=$comment['com_created']?>
-                </div>
-            </li>
-        </ul>
-<?endforeach ?>
+        <p><?= $comment['comment_created'] ?></p>
+
+        <p><?= $comment['username'] ?></p>
+    </div>
+<? endforeach ?>
         <form class="form-inline" method="post" role="form">
             <div class="form-group">
                     <input class="form-control" type="text" placeholder="Your comments" name="data[com_text]"/>
