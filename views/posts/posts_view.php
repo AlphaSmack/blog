@@ -25,7 +25,7 @@
 
 <form class="form-inline" method="post" role="form">
              <div class="form-group">
-                     <input class="form-control" type="text" placeholder="Kirjuta oma kommentaar" name="data[comment_text]"/>
+                     <input class="form-control" type="text" placeholder="Kirjuta oma kommentaar" name="data[com_text]"/>
                  </div>
              <div class="form-group">
                      <button class="btn btn-default" type="submit">Saada</button>
