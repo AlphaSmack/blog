@@ -15,9 +15,9 @@
 <h3>Kommentaarid</h3>
 <? foreach ($comments as $comment): ?>
     <div class="well">
-        <p><?= $comment['comment_text'] ?></p>
+        <p><?= $comment['com_text'] ?></p>
 
-        <p><?= $comment['comment_created'] ?></p>
+        <p><?= $comment['com_created'] ?></p>
 
         <p><?= $comment['username'] ?></p>
     </div>
